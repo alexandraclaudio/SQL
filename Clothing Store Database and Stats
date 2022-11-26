@@ -1,0 +1,26 @@
+---Creat a clothing store database 
+
+CREATE TABLE clothing_store (id INTEGER PRIMARY KEY, item TEXT, price INTEGER, quantity_on_hand INTEGER, amount_sold INTEGER);
+
+INSERT INTO clothing_store VALUES
+(1, "T-shirts", 8.00, 50, 35),
+(2, "Blouses", 10.00, 40, 25),
+(3, "Jeans", 15.00, 55, 30),
+(4, "Leggings", 12.00, 70, 57),
+(5, "Shorts", 10.00, 45, 25),
+(6, "Skirts", 14.00, 35, 26),
+(7, "Long Dresses", 25.00, 50, 33),
+(8, "Short Dresses", 15.00, 50, 46),
+(9, "Underwear", 5.00, 80, 63),
+(10, "Bras", 10.00, 70, 46),
+(11, "Socks", 4.00, 40, 29),
+(12, "High Heels", 20.00, 40, 24),
+(13, "Sandals", 10.00, 40, 28),
+(14, "Boots", 25.00, 30, 27),
+(15, "Flats", 12.00, 25, 21);
+
+--Display the database ordered by price.
+SELECT * FROM clothing_store ORDER BY price;
+
+What is the total amount of money made for each item starting with the cheapest item?
+SELECT item, price*amount_sold FROM clothing_store ORDER BY price;
